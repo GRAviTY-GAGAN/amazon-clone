@@ -24,7 +24,7 @@ const Home = () => {
             id={5451324556}
             image="https://m.media-amazon.com/images/I/614TSm1LckL._SX425_.jpg"
             title="PHILIPS Air Fryer HD9200/90, uses up to 90% less fat, 1400W, 4.1 Liter, with Rapid Air Technology"
-            price={"6,599"}
+            price={6599}
             rating={5}
           />
         </div>
@@ -33,7 +33,7 @@ const Home = () => {
             id={5545887525}
             image="https://m.media-amazon.com/images/I/81FyYXoQF-L._SY500_.jpg"
             title="Samsung 192 L 2 Star Direct Cool Single Door Refrigerator"
-            price={"12,790"}
+            price={12790}
             rating={5}
           />
           <Product
@@ -47,7 +47,7 @@ const Home = () => {
             id={942215458}
             image="https://m.media-amazon.com/images/I/91DmobHvTpL._UY550_.jpg"
             title="Skybags Sonic 49 Ltrs Green Rucksack"
-            price={"1,719"}
+            price={1719}
             rating={4}
           />
         </div>
@@ -56,7 +56,7 @@ const Home = () => {
             id={942215458}
             image="https://m.media-amazon.com/images/I/811CjK6UMFL._SX450_.jpg"
             title="Acer Ei491Cr 49 Inch (124.46 cm) Led 1800R Curved Dfhd 3840 X 1080 Pixels Va Monitor I 32:9 Aspect Ratio I AMD Radeon Freesync2 Technology I 144Hz I Vesa Certified Display HDR 400 I Dci-P3 Black"
-            price={"79,999"}
+            price={79999}
             rating={3}
           />
         </div>
