@@ -5,7 +5,7 @@ import { useStateValue } from "./StateProvider";
 import Subtotal from "./Subtotal";
 
 const Checkout = () => {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
 
   return (
     <div className="checkout">
@@ -17,6 +17,10 @@ const Checkout = () => {
         />
 
         <div>
+          {/* we are doing optional chaining because we were getting errors sometime. 
+          Optional chaining (?.) The optional chaining operator ( ?. ) accesses an object's property or calls a function. If the object is undefined or null , 
+          it returns undefined instead of throwing an error. */}
+          <h3>Hello, {user?.email}</h3>
           <h2 className="checkout__title">Your shopping basket</h2>
 
           {basket.map((item) => (
