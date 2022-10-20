@@ -9,6 +9,7 @@ import firebase from "firebase/compat/app";
 import "firebase/auth";
 import { useEffect } from "react";
 import { useStateValue } from "./StateProvider";
+import Payment from "./Payment";
 
 firebase.initializeApp(firebaseConfig);
 
@@ -40,6 +41,14 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
+          <Route
+            path="/payment"
+            element={
+              <>
+                <Header /> <Payment />
+              </>
+            }
+          />
           <Route
             path="/"
             element={
