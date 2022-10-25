@@ -14,6 +14,14 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import Orders from "./Orders";
 
+// http://127.0.0.1:5001/clone-8f6a7/us-central1/api -> backend site will be active here
+
+// Every time we use the app both frontend and backend should be running
+// to start backend the current directry should be
+// --> C:\Users\gagan\Desktop\React22\amazon-clone\functions
+// make sure that its in side functions folder
+// after that type --> firebase emulators:start
+
 firebase.initializeApp(firebaseConfig);
 
 const promise = loadStripe(

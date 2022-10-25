@@ -9,6 +9,8 @@ import "./Payment.css";
 import { getBasketTotal } from "./reducer";
 import { useStateValue } from "./StateProvider";
 import axios from "./axios";
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
 
 const Payment = () => {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -54,6 +56,18 @@ const Payment = () => {
       })
       .then(({ paymentIntent }) => {
         //paymentIntent is the payment confermation
+
+        firebase
+          .firestore()
+          .collection("users")
+          .doc(user?.uid)
+          .collection("orders")
+          .doc(paymentIntent.id)
+          .set({
+            basket: basket,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created,
+          });
 
         setSucceeded(true);
         setError(null);
@@ -140,7 +154,11 @@ const Payment = () => {
                   thousandSeparator={true}
                   prefix={"₹"}
                 />
-                <button disabled={processing || disabled || succeeded}>
+                <button
+                  disabled={
+                    processing || disabled || succeeded || basket.length === 0
+                  }
+                >
                   <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
                 </button>
               </div>
