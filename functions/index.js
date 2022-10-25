@@ -39,4 +39,10 @@ app.post("/payments/create", async (request, response) => {
 exports.api = functions.https.onRequest(app);
 
 // example endpoint
-// http://127.0.0.1:5001/clone-8f6a7/us-central1/api
+// http://127.0.0.1:5001/clone-8f6a7/us-central1/api -> backend site will be active here
+
+// Every time we use the app both frontend and backend should be running
+// to start backend the current directry should be
+// --> C:\Users\gagan\Desktop\React22\amazon-clone\functions
+// make sure that its in side functions folder
+// after that type --> firebase emulators:start
